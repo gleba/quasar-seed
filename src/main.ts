@@ -3,6 +3,11 @@ import { createQuasar } from './quasar'
 import { createRouter, createWebHistory } from 'vue-router';
 import routes from 'voie-pages';
 import App from './App.vue';
+
+
+//@ts-ignore
+const z = import.meta.glob('./thinks/*.ts')
+
 // import './main.css';
 import lang from 'quasar/lang/ru'
 import iconSet from 'quasar/icon-set/svg-material-icons-outlined'
@@ -23,15 +28,3 @@ const app = createApp(App)
 
 app.mount('#app')
 
-
-import * as a from "./thinks/z1";
-
-console.log("+", a)
-//@ts-ignore
-const z = import.meta.glob('./thinks/*.ts')
-console.log({z})
-
-// const modules = {
-//     './dir/foo.js': () => import("./thinks/z1"),
-//     './dir/bar.js': () => import("./thinks/a2")
-// }
