@@ -48,7 +48,7 @@ export default defineComponent({
 
 <style scoped>
 a {
-  color: #42b983;
+  color: #9C27B0;
 }
 
 label {

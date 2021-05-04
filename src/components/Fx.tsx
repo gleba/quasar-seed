@@ -1,3 +1,11 @@
+import {la} from "avuef/sens";
+// import {Vue} form "vue"
 
-//@ts-ignore
-export const Fx = ()=><div>x zz </div>
+// la.build.version
+
+export function Fx() {
+    return <div>
+        x{la.build.version}x
+    </div>
+}
+export default Fx

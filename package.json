@@ -26,8 +26,8 @@
     "@quasar/extras": "^1.10.4",
     "@vueuse/head": "^0.5.1",
     "alak": "^3.0.0-alpha.53",
-    "avuef": "^0.8.21",
-    "lasens": "^0.2.0-next.73",
+    "avuef": "^0.12.6",
+    "lasens": "^0.2.0-next.74",
     "quasar": "^2.0.0-0",
     "vite-tsconfig-paths": "^3.3.10",
     "vue": "^3.0.5",
@@ -46,6 +46,6 @@
     "vite-plugin-import-context": "^1.0.0-rc.1",
     "vite-plugin-voie": "^0.7.3",
     "voie-pages": "^0.4.0",
-    "vue-tsc": "^0.1.0"
+    "vue-tsc": "^0.0.26"
   }
 }

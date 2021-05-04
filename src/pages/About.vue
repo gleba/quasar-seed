@@ -1,4 +1,3 @@
 <template>
 <div>home</div>
-<QTable/>
 </template>
