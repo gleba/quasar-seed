@@ -1,5 +1,5 @@
 {
-  "name": "vue-tsx",
+  "name": "pulsar-seed",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -38,6 +38,7 @@
     "@vitejs/plugin-vue-jsx": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.11",
     "@vuedx/typescript-plugin-vue": "^0.6.3",
+    "rollup-plugin-analyzer": "^4.0.0",
     "sass": "^1.32.12",
     "typescript": "^4.2.4",
     "vite": "^2.2.4",

@@ -6,25 +6,31 @@ import App from './App.vue';
 
 
 //@ts-ignore
-const z = import.meta.glob('./thinks/*.ts')
-
-// import './main.css';
+const thinks = import.meta.glob('./thinks/*.ts')
+//
+// console.log("+", thinks)
+//
+// // import './main.css';
 import lang from 'quasar/lang/ru'
 import iconSet from 'quasar/icon-set/svg-material-icons-outlined'
+import {Fx} from "~/components/Fx";
 
+// //
+// //
+// //
 const quasar = createQuasar({
     iconSet,
     lang,
 })
-
+// //
 const router = createRouter({
     history: createWebHistory(),
     routes,
 });
-
+//
 const app = createApp(App)
     .use(router)
     .use(quasar)
 
+//
 app.mount('#app')
-

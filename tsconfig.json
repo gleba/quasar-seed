@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "strict": true,
     "jsx": "preserve",
     "allowJs": true,
@@ -16,7 +17,8 @@
     ],
     "types": [
       "vite/client",
-      "quasar"
+      "quasar",
+      "alak",
     ],
     "plugins": [
       {

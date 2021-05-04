@@ -1,4 +1,4 @@
 <template>
 <div>home</div>
-<q-btn>hi!xzzssd</q-btn>
+<q-btn to="/">hi!xzzssd</q-btn>
 </template>

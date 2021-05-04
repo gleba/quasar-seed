@@ -7,10 +7,12 @@ import ViteComponents from 'vite-plugin-components'
 import {resolve} from 'path'
 import resolveQuasar from './scripts/resolver'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import analyze from 'rollup-plugin-analyzer'
 
 export default defineConfig({
     plugins: [vue(), vueJsx(), voie(),
         tsconfigPaths(),
+        // analyze(),
         ViteComponents({
             customComponentResolvers: [
                 resolveQuasar
@@ -39,5 +41,15 @@ export default defineConfig({
         __QUASAR_SSR_PWA__: false
         // __QUASAR_SSR_PWA__: 'navigator.standalone || window.matchMedia("(display-mode: standalone)").matches'
     },
-
+    build: {
+        // outDir: './dist',
+        // polyfillDynamicImport:false,
+        // cssCodeSplit:false,
+        rollupOptions: {
+            output: {
+                entryFileNames: "[name].js",
+                manualChunks: undefined
+            }
+        }
+    }
 })
