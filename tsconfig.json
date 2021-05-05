@@ -8,6 +8,8 @@
     "jsx": "preserve",
     "allowJs": true,
     "noImplicitAny": false,
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -19,7 +21,8 @@
       "vite/client",
       "quasar",
       "alak",
-      "lasens"
+      "lasens",
+      "avuef/sens"
     ],
     "plugins": [
       {

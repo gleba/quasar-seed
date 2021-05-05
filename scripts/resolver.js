@@ -1,14 +1,14 @@
+import importMap from "quasar/dist/transforms/import-map.json";
 
-import importMap from 'quasar/dist/transforms/import-map.json'
-
-export default name => {
-  const importName = importMap[name]
+export default (name) => {
+  const importName = importMap[name];
+  console.log("::", name);
   if (!importName) {
-    return
+    return;
   }
 
-  const script = `quasar/${importName}`
+  const script = `quasar/${importName}`;
   return {
     path: script,
-  }
-}
+  };
+};

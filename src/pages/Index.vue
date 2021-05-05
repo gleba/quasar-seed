@@ -1,9 +1,8 @@
 <template>
     <div class="container">
-        <h1>Home page</h1>
-        <Fx/>
+<!--        <Fx/>/-->
         <div>{{$la.build.version}}</div>
-        <q-btn glossy label="ok"/>
+<!--        <q-btn glossy label="ok"/>-->
     </div>
 </template>
 <script>
