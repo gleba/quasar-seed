@@ -34,11 +34,15 @@
 ### WebStorm
 последний из коробки.
 ### [VSCode](https://code.visualstudio.com/)
-требуется настраивать со всеми плагинами для vue и прочими вроде [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+требуется настраивать со всеми плагинами для vue и прочими.
+
+вроде [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). 
+
+Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
 #### If Using `<script setup>`
 [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
 
 # NoteBene
-## Возможно подлючить
+## Возможно расширение
 * [imp](https://github.com/onebay/vite-plugin-imp) - A vite plugin for import library component style automatic.
 * [svg](https://github.com/anncwb/vite-plugin-svg-icons) - Used to generate svg sprite map.
