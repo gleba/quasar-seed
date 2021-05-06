@@ -1,5 +1,3 @@
-#Документация
-
 ## Инструменты создания контента
 
 [Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как спосбоб описания шаблонов отображения, компонентов
@@ -11,7 +9,8 @@
 
 ## Иструменты управленим модели, логическими состояем.
 В основе лежит реактивная частица "алак-атом" передачи данных, аналог `ref` и `reactive` от vue, но более производительная и применимая к чистым функциям js/ts.
-* (алак-атом)[https://alak.now.sh/]
+* [алак-атом](https://alak.now.sh/)
+
 Так же используется коннектор к vue -`avuef` и композиция контроллера модели - `lasens`.
 Эти два решения временно не распологают документацией, но уже достаточно стабилизировались для применения.
 С любиыми вопросами можно писать в [телегу](https://t.me/glebpw)
@@ -20,12 +19,16 @@
 ## Инструменты сборки архитектуры проекта
 [Vite](https://vitejs.dev) - Основной сборщик
 [Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
-[Vite Plugin](https://github.com/antfu/vite-plugin-components - Автоматический импорт компонентов в vue-темплейтах
+[Vite Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
 ### Иконки
 Автоматический импорт иконок из клипарта Iconify
-* [Обзор клипарта](https://icones.js.org/collection/all)
-* [plugin](https://github.com/antfu/vite-plugin-icons) - плагин vite
-Находим иконку в клипарте, и добавлем в шаблон по соглашению `{prefix}-{collection}-{icon}`, например `<icon-mdi-account />` или `<i-mdi-account />`, или без префикса `<mdi-account />`.
+* [клипарт](https://icones.js.org/collection/all)
+* [vite-plugin-icons](https://github.com/antfu/vite-plugin-icons)
+
+Находим иконку в клипарте вроде `collection:icon`, и добавлем в шаблон по соглашению `{prefix}-{collection}-{icon}`, примеры:
+* `<icon-mdi-account />`
+* `<i-mdi-account />`
+* `<mdi-account />`
 
 ## Рекомендации к IDE
 ### WebStorm
