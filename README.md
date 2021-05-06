@@ -19,7 +19,7 @@
 ## Инструменты сборки архитектуры проекта
 * [Vite](https://vitejs.dev) - Основной сборщик
 * [Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
-* [Vite Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
+* [Сomponents Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
 ### Иконки
 Автоматический импорт иконок из клипарта Iconify
 * [клипарт](https://icones.js.org/collection/all)
