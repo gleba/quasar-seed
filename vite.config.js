@@ -18,8 +18,6 @@ export default defineConfig({
     // analyze(),
     ViteComponents({
       extensions: ["tsx", "vue"],
-
-      // dirs:[resolve(__dirname, './src/components')],
       customComponentResolvers: [
         quasarResolver,
         csxResolver,
@@ -33,12 +31,10 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   resolve: {
-    //@ts-ignore
     alias: {
       quasar$: resolve("node_modules/quasar/dist/quasar.esm.prod.js"),
-      // 'quasar$': resolve('node_modules/quasar/src'),
-      "@": [resolve(__dirname, "./src")],
-      "~": [resolve(__dirname, "./src")],
+      "@": resolve(__dirname, "./src"),
+      "~": resolve(__dirname, "./src"),
     },
   },
   // css: {
@@ -58,14 +54,7 @@ export default defineConfig({
   },
 
   build: {
-    // outDir: './dist',
-    // polyfillDynamicImport:false,
-    // cssCodeSplit:false,
     rollupOptions: {
-      // input:{
-      //     quasar:"quasar/"
-      //     app:"/"
-      // },
       output: {
         entryFileNames: "[name].js",
         manualChunks: undefined,
