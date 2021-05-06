@@ -1,13 +1,13 @@
 ## Инструменты создания контента
 
-[Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как спосбоб описания шаблонов отображения, компонентов
-[Quasar](https://next.quasar.dev/vue-components/button) - Возможность воспользоваться готовыми компонентами вроде кнопок и форм
-[Pug](https://pugjs.org/language/attributes.html) - Возможность интерпретирования HTML
-[Saas](https://sass-lang.com/guide) - Возможность интерпретирования CSS
-[Typescript](https://www.typescriptlang.org/docs/handbook/2/generics.html) - Опциональная типизация с средней проверкой типов
-[TSX/JSX](https://github.com/vuejs/jsx-next) - Способ описания функциональных компонетов
+* [Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как спосбоб описания шаблонов отображения, компонентов
+* [Quasar](https://next.quasar.dev/vue-components/button) - Возможность воспользоваться готовыми компонентами вроде кнопок и форм
+* [Pug](https://pugjs.org/language/attributes.html) - Возможность интерпретирования HTML
+* [Saas](https://sass-lang.com/guide) - Возможность интерпретирования CSS
+* [Typescript](https://www.typescriptlang.org/docs/handbook/2/generics.html) - Опциональная типизация с средней проверкой типов
+* [TSX/JSX](https://github.com/vuejs/jsx-next) - Способ описания функциональных компонетов
 
-## Иструменты управленим модели, логическими состояем.
+## Иструменты модели и логического состояния.
 В основе лежит реактивная частица "алак-атом" передачи данных, аналог `ref` и `reactive` от vue, но более производительная и применимая к чистым функциям js/ts.
 * [алак-атом](https://alak.now.sh/)
 
@@ -17,9 +17,9 @@
 
 
 ## Инструменты сборки архитектуры проекта
-[Vite](https://vitejs.dev) - Основной сборщик
-[Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
-[Vite Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
+* [Vite](https://vitejs.dev) - Основной сборщик
+* [Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
+* [Vite Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
 ### Иконки
 Автоматический импорт иконок из клипарта Iconify
 * [клипарт](https://icones.js.org/collection/all)
