@@ -1,36 +1,41 @@
-# Vue 3 + Typescript + Vite
+#Документация
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+## Инструменты создания контента
 
-## Recommended IDE Setup
+[Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как спосбоб описания шаблонов отображения, компонентов
+[Quasar](https://next.quasar.dev/vue-components/button) - Возможность воспользоваться готовыми компонентами вроде кнопок и форм
+[Pug](https://pugjs.org/language/attributes.html) - Возможность интерпретирования HTML
+[Saas](https://sass-lang.com/guide) - Возможность интерпретирования CSS
+[Typescript](https://www.typescriptlang.org/docs/handbook/2/generics.html) - Опциональная типизация с средней проверкой типов
+[TSX/JSX](https://github.com/vuejs/jsx-next) - Способ описания функциональных компонетов
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+## Иструменты управленим модели, логическими состояем.
+В основе лежит реактивная частица "алак-атом" передачи данных, аналог `ref` и `reactive` от vue, но более производительная и применимая к чистым функциям js/ts.
+* (алак-атом)[https://alak.now.sh/]
+Так же используется коннектор к vue -`avuef` и композиция контроллера модели - `lasens`.
+Эти два решения временно не распологают документацией, но уже достаточно стабилизировались для применения.
+С любиыми вопросами можно писать в [телегу](https://t.me/glebpw)
 
-### If Using `<script setup>`
 
+## Инструменты сборки архитектуры проекта
+[Vite](https://vitejs.dev) - Основной сборщик
+[Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
+[Vite Plugin](https://github.com/antfu/vite-plugin-components - Автоматический импорт компонентов в vue-темплейтах
+### Иконки
+Автоматический импорт иконок из клипарта Iconify
+* [Обзор клипарта](https://icones.js.org/collection/all)
+* [plugin](https://github.com/antfu/vite-plugin-icons) - плагин vite
+Находим иконку в клипарте, и добавлем в шаблон по соглашению `{prefix}-{collection}-{icon}`, например `<icon-mdi-account />` или `<i-mdi-account />`, или без префикса `<mdi-account />`.
+
+## Рекомендации к IDE
+### WebStorm
+последний из коробки.
+### [VSCode](https://code.visualstudio.com/)
+требуется настраивать со всеми плагинами для vue и прочими вроде [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+#### If Using `<script setup>`
 [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
 
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
-
-### If Using Volar
-
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
-
-### If Using Vetur
-
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
-
-
-https://github.com/anncwb/vite-plugin-import-context
-https://github.com/brattonross/vite-plugin-voie
-
-
-https://github.com/onebay/vite-plugin-imp
-https://github.com/anncwb/vite-plugin-svg-icons
-https://www.npmjs.com/package/purge-icons
+# NoteBene
+## Возможно подлючить
+* [imp](https://github.com/onebay/vite-plugin-imp) - A vite plugin for import library component style automatic.
+* [svg](https://github.com/anncwb/vite-plugin-svg-icons) - Used to generate svg sprite map.
