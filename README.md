@@ -1,6 +1,6 @@
 ## Инструменты создания контента
 
-* [Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как спосбоб описания шаблонов отображения, компонентов
+* [Vue 3](https://v3.vuejs.org/guide/template-syntax.html#interpolations) - Как способ описания шаблонов отображения, компонентов
 * [Quasar](https://next.quasar.dev/vue-components/button) - Возможность воспользоваться готовыми компонентами вроде кнопок и форм
 * [Pug](https://pugjs.org/language/attributes.html) - Возможность интерпретирования HTML
 * [Saas](https://sass-lang.com/guide) - Возможность интерпретирования CSS
