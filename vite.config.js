@@ -1,21 +1,23 @@
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import voie from "vite-plugin-voie";
-import { Quasar } from "quasar";
+import {Quasar} from "quasar";
 import ViteComponents from "vite-plugin-components";
 
 import quasarResolver from "./scripts/resolver";
 import csxResolver from "./scripts/csx.resolver";
 import tsconfigPaths from "vite-tsconfig-paths";
+import Icons, {ViteIconsResolver} from "vite-plugin-icons";
+import {resolve} from "path";
 import analyze from "rollup-plugin-analyzer";
-import Icons, { ViteIconsResolver } from "vite-plugin-icons";
-import { resolve } from "vite-tsconfig-paths/dist/path";
 
 export default defineConfig({
   plugins: [
     vue(),
-    // analyze(),
+    analyze({
+      limit:10
+    }),
     ViteComponents({
       extensions: ["tsx", "vue"],
       customComponentResolvers: [
@@ -45,6 +47,7 @@ export default defineConfig({
   //     }
   // },
   define: {
+    __BUILD_TIME__: JSON.stringify(Date.now()),
     __QUASAR_VERSION__: JSON.stringify(Quasar.version),
     __QUASAR_SSR__: false,
     __QUASAR_SSR_SERVER__: false,
