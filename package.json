@@ -26,7 +26,7 @@
     "@quasar/extras": "^1.10.9",
     "@vueuse/head": "^0.6.0",
     "alak": "^3.0.0-alpha.56",
-    "avuef": "^0.12.20",
+    "avuef": "^0.12.21",
     "lasens": "^0.2.0-next.74",
     "quasar": "^2.0.3",
     "vite-tsconfig-paths": "^3.3.13",
