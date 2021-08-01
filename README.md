@@ -16,7 +16,7 @@
 С любиыми вопросами можно писать в [телегу](https://t.me/glebpw)
 
 
-## Инструменты сборки архитектуры проекта
+## Инструменты сборки проекта
 * [Vite](https://vitejs.dev) - Основной сборщик
 * [Voie Plugin](https://github.com/brattonross/vite-plugin-voie) - Маршрутизация на основе файловой системы
 * [Сomponents Plugin](https://github.com/antfu/vite-plugin-components) - Автоматический импорт компонентов в vue-темплейтах
