@@ -2,6 +2,7 @@ import {MakeThing} from "lasens";
 
 class buildModel {
     version = 1
+    someVar = "someVar"
 }
 
 export const buildThing = MakeThing(buildModel)

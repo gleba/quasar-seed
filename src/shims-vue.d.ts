@@ -1,30 +1,18 @@
 import { DefineComponent } from 'vue'
+import { NS } from 'lasens'
+
+declare module 'avuef/sens' {
+  export declare const vi:any
+}
 
 declare module '*.vue' {
   import { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
   export default component
-  interface Vue {
-    $la: NS
-  }
   interface ComponentCustomProperties {
-    $la: NS
+    $v: GlobalValues<NS>;
+    $value: GlobalValues<NS>;
+    $a: ActionsAndAtoms<NS>;
+    $action: ActionsAndAtoms<NS>;
   }
-  $la: NS
 }
-
-// declare module 'vue' {
-//   interface Vue {
-//     $la: NS
-//   }
-// }
-// declare module '@vue/runtime-core' {
-//   interface ComponentCustomProperties {
-//     $la: NS
-//   }
-// }
-// declare module 'vue/types/vue' {
-//   interface Vue {
-//     $la: NS
-//   }
-// }

@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-<!--        <Fx/>/-->
-        <div>{{$la.build.version}}</div>
-<!--        <q-btn glossy label="ok"/>-->
+        <div>{{$value.build.version}}</div>
     </div>
 </template>
 <script>

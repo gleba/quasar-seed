@@ -2,15 +2,15 @@
 q-layout(view="hHh Lpr lFf")
   q-header(elevated).darkStyle
     q-toolbar(q-toolbar row no-wrap items-center q-px-none)
-      q-btn(q-btn flat dense round aria-label="Menu" @click="$la.lay.toggleLeft")
+      q-btn(q-btn flat dense round aria-label="Menu" @click="$action.lay.toggleLeft")
         i-ls-tilemenu
       q-toolbar-title Quasar seed
   q-drawer(
-    v-model="$la.lay.leftDrawer"
-    :mini="$la.lay.miniDrawer"
+    v-model="$value.lay.leftDrawer"
+    :mini="$value.lay.miniDrawer"
     show-if-above
     side="left"
-    :bordered="!$la.lay.dark"
+    :bordered="!$value.lay.dark"
   )
     template(v-for="(nav, i) of navs" :key="i")
       q-item(:to="nav.to" :exact="nav.exact")
