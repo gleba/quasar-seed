@@ -33,6 +33,7 @@
 ## Рекомендации к IDE
 ### WebStorm
 последний из коробки.
+- [Темплейт для модели](https://gist.github.com/gleba/5263d67009a035145700c602f923ebe0)
 ### [VSCode](https://code.visualstudio.com/)
 требуется настраивать со всеми плагинами для vue и прочими.
 
