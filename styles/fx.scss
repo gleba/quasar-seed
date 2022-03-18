@@ -1,0 +1,111 @@
+$f: 0px, 1px, 1px, 2px, 3px, 5px, 8px, 13px, 21px, 34px, 55px, 89px, 144px,
+  233px, 377px, 610px, 987px, 1597px, 2584px, 4181px, 6765px;
+$fi: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597,
+  2584, 4181, 6765;
+$pc: 1%, 2%, 3%, 5%, 8%, 13%, 21%, 34%, 55%, 89%;
+
+$primary: #5dba00;
+
+:root {
+  --primary: #{$primary};
+  @for $i from 4 through 8 {
+    $iname: (8-$i);
+    $val: 55% - nth($pc, $i);
+    $v: nth($pc, $i);
+    #{--lighten-#{$iname}}: lighten($primary, $val);
+  }
+
+  @for $i from 6 through 10 {
+    $iname: 4- (10-$i);
+    $val: nth($pc, $i);
+    #{--saturate-#{$iname}}: saturate($primary, $val);
+  }
+
+  @for $i from 4 through 8 {
+    $iname: 4- (8-$i);
+    $val: nth($fi, $i);
+  }
+  @for $i from 4 through 8 {
+    $iname: 4- (8-$i);
+    $val: nth($pc, $i);
+    #{--darken-#{$iname}}: darken($primary, $val);
+    #{--desaturate-#{$iname}}: desaturate($primary, $val);
+  }
+}
+
+@for $i from 14 through 18 {
+  @media (min-height: nth($f, $i)) {
+    :root {
+      @for $j from 13 through 0 {
+        $p: $i - $j;
+        #{--ph#{13-$j}}: nth($f, $p);
+      }
+    }
+  }
+}
+
+@for $i from 14 through 18 {
+  @media (min-width: nth($f, $i)) {
+    :root {
+      $pad: nth($fi, $i - 9);
+      @for $j from 13 through 0 {
+        $p: $i - $j;
+        $c: $j * 1.570796325;
+        $z: ($i - 10) * 3.14159265;
+        $fontSmall: ($i - 13) * 1.570796325;
+        #{--fontsize-#{$j}}: #{$z + $c}px;
+        #{--fontsize-sm#{$j}}: #{$fontSmall + $c}px;
+        #{--pw#{13-$j}}: nth($f, $p);
+      }
+      #{--min-width}: nth($f, $i - 1) - $pad * 2;
+      @if $i <= 15 {
+        --max-width: calc(100vw - #{$pad * 2}px);
+        #{--line-height}: 21px;
+      } @else {
+        #{--max-width}: nth($f, $i) - $pad * 2;
+        #{--line-height}: nth($f, $i - 7);
+      }
+    }
+  }
+}
+
+@for $i from 0 through 13 {
+  .pad-#{$i} {
+    padding: var(--ph#{$i}) var(--pw#{$i});
+  }
+  .ph-#{$i} {
+    padding: var(--ph#{$i}) 0;
+  }
+  .pw-#{$i} {
+    padding: 0 var(--pw#{$i});
+  }
+  .mar#{$i} {
+    margin: var(--ph#{$i}) var(--pw#{$i});
+  }
+}
+@for $i from 0 through 4 {
+  .li-#{$i} {
+    color: var(--lighten-#{$i});
+  }
+  .li-bg-#{$i} {
+    background-color: var(--lighten-#{$i});
+  }
+  .da-#{$i} {
+    color: var(--darken-#{$i});
+  }
+  .da-bg-#{$i} {
+    background-color: var(--darken-#{$i});
+  }
+  .sa-#{$i} {
+    color: var(--saturate-#{$i});
+  }
+  .sa-bg-#{$i} {
+    background-color: var(--saturate-#{$i});
+  }
+  .de-#{$i} {
+    color: var(--desaturate-#{$i});
+  }
+  .de-bg-#{$i} {
+    background-color: var(--desaturate-#{$i});
+  }
+}

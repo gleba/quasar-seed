@@ -1,11 +1,25 @@
 <template>
-  <h1>About</h1>
-  <p>A colored page.</p>
+  <h1>About page</h1>
+  <pre>
+    props:{{props}}
+  </pre>
+  <ul>
+    <q-btn @click="index()">index</q-btn>
+  </ul>
 </template>
 
-<style>
-h1,
-p {
-  color: green;
+<script lang="ts" setup>
+import Counter from '../index/Counter.vue'
+import { navigate } from 'vite-plugin-ssr/client/router'
+import {useHead} from "@vueuse/head";
+
+const index = ()=> {
+  navigate("/")
 }
-</style>
+
+const props = defineProps({
+  title: String,
+  urlKey: String
+})
+
+</script>

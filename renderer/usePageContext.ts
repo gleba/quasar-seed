@@ -3,18 +3,25 @@
 
 import { inject } from 'vue'
 import type { App } from 'vue'
-import { PageContext } from './types'
 
-export { usePageContext }
-export { setPageContext }
 
-const key = Symbol()
+const key = 'Symbol()'
 
-function usePageContext() {
+export function usePageContext() {
   const pageContext = inject(key)
-  return pageContext
+  return pageContext as PageContext
 }
 
-function setPageContext(app: App, pageContext: PageContext) {
+export function setPageContext(app: App, pageContext: PageContext) {
   app.provide(key, pageContext)
+}
+
+
+export type PageProps = {}
+// The `pageContext` that are available in both on the server-side and browser-side
+export type PageContext = {
+  Page: any
+  pageProps?: PageProps
+  title?: string
+  description?: string
 }

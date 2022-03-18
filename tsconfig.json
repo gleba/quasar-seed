@@ -1,14 +1,42 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "ES2020",
+    "module": "CommonJS",
     "moduleResolution": "Node",
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
     "target": "ES2017",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
+    "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
+    "types": [
+      "@types/node",
+      "vite/client",
+      "vite/vite-plugin-pwa/client",
+      "fastify-express",
+      "quasar",
+      "@quasar"
+    ],
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["*"],
+      "virtual:pwa-register": ["node_modules/vite-plugin-pwa"]
+    },
+//    "typeRoots": [
+//      "./definitions",
+//      "./definitions/*.d.ts",
+//      "./definitions/index.d.ts"
+//    ]
   },
+  "include": [
+    "**/*.d.ts",
+    "**/*.ts",
+//    "definitions/global.d.ts.d.ts",
+    "node_modules/vite-plugin-import-context/client.d.ts"
+  ],
   "ts-node": {
     "transpileOnly": true,
     "compilerOptions": {
